@@ -4,7 +4,6 @@ import 'package:isalmi/ui/home/tabs/hadeth/hadeth_tab.dart';
 import 'package:isalmi/ui/home/tabs/quran/quran_tab.dart';
 import 'package:isalmi/ui/home/tabs/radio/radio_tab.dart';
 import 'package:isalmi/ui/home/tabs/sebha/sebha_tab.dart';
-import 'package:isalmi/ui_utiles.dart';
 
 import '../../components/bottom_nav_item.dart';
 
@@ -41,18 +40,22 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavItem(
             iconPath: 'quran_icn.png',
             title: 'Quran',
+            backgroundColor: Theme.of(context).colorScheme.primary
           ),
           BottomNavItem(
             iconPath: 'hadeth.png',
             title: 'hadeth',
+            backgroundColor: Theme.of(context).colorScheme.primary
           ),
           BottomNavItem(
             iconPath: 'sebha.png',
             title: 'sebha',
+            backgroundColor: Theme.of(context).colorScheme.primary
           ),
           BottomNavItem(
             iconPath: 'radio.png',
             title: 'radio',
+            backgroundColor: Theme.of(context).colorScheme.primary
           ),
         ],
       ),

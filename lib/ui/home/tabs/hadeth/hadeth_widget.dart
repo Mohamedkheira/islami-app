@@ -17,10 +17,7 @@ class HadethWidget extends StatelessWidget {
           Navigator.pushNamed(context, HadethDetailsScreen.routeName,arguments: hadeth);
         },
         child: Text(hadeth.title,
-        style: TextStyle(
-          fontWeight: FontWeight.w400,
-          fontSize: 25,
-        ),
+       style: Theme.of(context).textTheme.bodySmall,
           textAlign: TextAlign.center,
         ),
       ),

@@ -23,23 +23,17 @@ class QuranWidget extends StatelessWidget {
           children: [
             Expanded(
               child: Text(chapterName,
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 25,
-              ),
+                style: Theme.of(context).textTheme.bodySmall,
                 textAlign: TextAlign.center,
               ),
             ),
             Container(
               width: 3,
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.onPrimaryContainer,
             ),
             Expanded(
               child: Text(numberVerses.toString(),
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 25,
-              ),
+                style: Theme.of(context).textTheme.bodySmall,
                 textAlign: TextAlign.center,
               ),
             ),

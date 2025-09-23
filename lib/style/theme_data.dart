@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 
 class MyThemeData {
   static final Color lightPrimary = Color(0XFFB7935F);
+  static final Color darkPrimary = Color(0XFF141A2E);
+  static final Color darkSecondary = Color(0XFFFACC1D);
+  static final Color whiteColor = Colors.white;
+  static bool isDark = true;
+
   static final ThemeData lightTheme = ThemeData(
+    cardTheme: CardThemeData(
+      color: Colors.white,
+      surfaceTintColor: null
+    ),
     useMaterial3: true,
     dividerColor: lightPrimary,
     dividerTheme: DividerThemeData(
@@ -11,10 +20,13 @@ class MyThemeData {
       space: 0
     ),
     colorScheme: ColorScheme.fromSeed(
+      onPrimaryContainer: lightPrimary,
       seedColor: lightPrimary,
       primary: lightPrimary,
       onPrimary: Colors.white,
       secondary: lightPrimary,
+      inversePrimary: lightPrimary,
+      onSurface:Colors.white,
       onSecondary: Colors.black,
     ),
     scaffoldBackgroundColor: Colors.transparent,
@@ -23,11 +35,13 @@ class MyThemeData {
       centerTitle: true,
       titleTextStyle: TextStyle(
         color: Colors.black,
+        fontFamily: 'Massiri',
         fontSize: 30,
         fontWeight: FontWeight.w700,
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: lightPrimary,
       selectedItemColor: Colors.black,
       unselectedItemColor: Colors.white,
       selectedIconTheme: IconThemeData(
@@ -40,9 +54,106 @@ class MyThemeData {
         size: 35,
       ),
     ),
+
+    textTheme: TextTheme(
+
+      headlineLarge: TextStyle(
+        fontFamily: 'Massiri',
+        fontSize: 30,
+        fontWeight: FontWeight.w700,
+      ),
+      bodyMedium: TextStyle(
+        fontFamily: 'Massiri',
+        fontSize: 25,
+        fontWeight: FontWeight.w600,
+      ),
+      bodySmall: TextStyle(
+        fontFamily: 'Inter',
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
+      ),
+    ),
+
   );
 
-  static final ThemeData darkTheme = ThemeData(
 
+  // dark
+  static final ThemeData darkTheme = ThemeData(
+    iconTheme: IconThemeData(
+      color: darkSecondary,
+    ),
+    cardTheme: CardThemeData(
+        color: darkPrimary,
+        surfaceTintColor: null,
+    ),
+
+    useMaterial3: true,
+    dividerColor: lightPrimary,
+    dividerTheme: DividerThemeData(
+      color: darkSecondary,
+      thickness: 3,
+      space: 0
+    ),
+
+    colorScheme: ColorScheme.fromSeed(
+      onPrimaryContainer: darkSecondary,
+      seedColor: darkPrimary,
+      primary: darkPrimary,
+      onPrimary: whiteColor,
+      inversePrimary: darkSecondary,
+      onSecondary: darkSecondary,
+      onSurface: darkPrimary
+    ),
+    scaffoldBackgroundColor: Colors.transparent,
+
+    appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(
+        color: Colors.white
+      ),
+      color: Colors.transparent,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        color: whiteColor,
+        fontFamily: 'Massiri',
+        fontSize: 30,
+        fontWeight: FontWeight.w700,
+
+      ),
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: darkPrimary,
+      selectedItemColor: darkSecondary,
+      unselectedItemColor: whiteColor,
+      selectedIconTheme: IconThemeData(
+        size: 40,
+      ),
+      selectedLabelStyle: TextStyle(
+        fontSize: 15
+      ),
+      unselectedIconTheme: IconThemeData(
+        size: 35,
+      ),
+    ),
+
+    textTheme: TextTheme(
+      headlineLarge: TextStyle(
+        color: whiteColor,
+        fontFamily: 'Massiri',
+        fontSize: 30,
+        fontWeight: FontWeight.w700,
+      ),
+      bodyMedium: TextStyle(
+        color: whiteColor,
+        fontFamily: 'Massiri',
+        fontSize: 25,
+        fontWeight: FontWeight.w600,
+      ),
+      bodySmall: TextStyle(
+        color: Colors.white,
+        fontFamily: 'Inter',
+        fontSize: 25,
+        fontWeight: FontWeight.w400,
+      ),
+    ),
   );
 }

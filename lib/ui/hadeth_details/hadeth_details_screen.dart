@@ -16,7 +16,6 @@ class HadethDetailsScreen extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadiusGeometry.circular(12),
         ),
-        color: Theme.of(context).colorScheme.onPrimary,
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
@@ -36,10 +35,7 @@ class HadethDetailsScreen extends StatelessWidget {
                   child: SingleChildScrollView(
                     child: Text(
                         args.content,
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w400,
-                        ),
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
                         textDirection: TextDirection.rtl
                     ),
                   ),
