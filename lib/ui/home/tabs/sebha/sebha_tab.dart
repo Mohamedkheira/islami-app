@@ -68,7 +68,7 @@ class _SebhaTabState extends State<SebhaTab> {
             Container(
               padding: EdgeInsets.all(22),
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.inversePrimary,
                 borderRadius: BorderRadius.all(Radius.circular(25)),
               ),
               child: Text(
@@ -76,7 +76,7 @@ class _SebhaTabState extends State<SebhaTab> {
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w600,
-                  color: Theme.of(context).colorScheme.onPrimary
+                  color: Theme.of(context).colorScheme.onSurface
                 ),
               ),
             ),

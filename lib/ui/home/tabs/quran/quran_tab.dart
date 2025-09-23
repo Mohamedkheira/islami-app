@@ -44,11 +44,11 @@ class _QuranTabState extends State<QuranTab> {
           decoration: BoxDecoration(
             border: BorderDirectional(
               top: BorderSide(
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.onPrimaryContainer,
                 width: 3,
               ),
               bottom: BorderSide(
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.onPrimaryContainer,
                 width: 3,
               ),
             ),
@@ -59,16 +59,13 @@ class _QuranTabState extends State<QuranTab> {
                 Expanded(
                   child: Text(
                     'Sura Name',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w600
-                    ),
+                    style: Theme.of(context).textTheme.bodyMedium,
                     textAlign: TextAlign.center,
                   ),
                 ),
                 Container(
                   width: 3,
-                  color: Theme.of(context).colorScheme.primary,
+                  color: Theme.of(context).colorScheme.onPrimaryContainer,
                 ),
                 // VerticalDivider(
                 //   color: Theme.of(context).colorScheme.primary,
@@ -77,10 +74,7 @@ class _QuranTabState extends State<QuranTab> {
                 Expanded(
                   child: Text(
                       'Number Verses',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w600
-                    ),
+                    style: Theme.of(context).textTheme.bodyMedium,
                     textAlign: TextAlign.center,
                   ),
                 ),
