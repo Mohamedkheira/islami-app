@@ -59,6 +59,7 @@ class _SebhaTabState extends State<SebhaTab> {
                 color: Theme.of(context).colorScheme.primary,
                 borderRadius: BorderRadius.all(Radius.circular(25)),
               ),
+
               child: Text(
                 count.toString(),
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
