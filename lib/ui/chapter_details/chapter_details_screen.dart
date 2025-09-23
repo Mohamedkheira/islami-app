@@ -74,7 +74,7 @@ class _ChapterDetailsScreenState extends State<ChapterDetailsScreen> {
                     ),
                     itemCount: verses.length,
                   ),
-                ): CircularProgressIndicator(),
+                ): Center(child: CircularProgressIndicator()),
               ],
             ),
           ),
