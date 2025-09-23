@@ -33,7 +33,6 @@ class _ChapterDetailsScreenState extends State<ChapterDetailsScreen> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadiusGeometry.circular(12),
           ),
-          color: Theme.of(context).colorScheme.onPrimary,
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
@@ -74,7 +73,7 @@ class _ChapterDetailsScreenState extends State<ChapterDetailsScreen> {
                     ),
                     itemCount: verses.length,
                   ),
-                ): Center(child: CircularProgressIndicator()),
+                ): Center(child: CircularProgressIndicator(color: Theme.of(context).colorScheme.onPrimaryContainer,)),
               ],
             ),
           ),

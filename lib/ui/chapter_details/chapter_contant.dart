@@ -8,10 +8,7 @@ class ChapterContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Text('$chapterName {${index+1}}',
-      style: TextStyle(
-        fontWeight: FontWeight.w400,
-        fontSize: 20,
-      ),
+      style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Theme.of(context).colorScheme.onSecondary),
       textAlign: TextAlign.center,
       textDirection: TextDirection.rtl,
       locale: Locale('ar'),

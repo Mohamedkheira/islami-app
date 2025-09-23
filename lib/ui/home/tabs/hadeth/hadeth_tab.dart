@@ -17,8 +17,8 @@ class _HadethTabState extends State<HadethTab> {
   List<Hadeth> allHadeth =[];
   @override
   void initState() {
-    super.initState();
     readHadethData();
+    super.initState();
   }
 
   @override
@@ -38,21 +38,18 @@ class _HadethTabState extends State<HadethTab> {
           decoration: BoxDecoration(
             border: BorderDirectional(
               top: BorderSide(
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.onPrimaryContainer,
                 width: 3,
               ),
               bottom: BorderSide(
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.onPrimaryContainer,
                 width: 3,
               ),
             ),
           ),
           child: Text(
-            'hadeth',
-            style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.w600
-            ),
+            'AHadeth',
+            style: Theme.of(context).textTheme.bodyMedium,
             textAlign: TextAlign.center,
           ),
         ),
@@ -63,7 +60,7 @@ class _HadethTabState extends State<HadethTab> {
               },
               separatorBuilder: (context, index) => Divider(),
               itemCount: 50): Center(
-            child: CircularProgressIndicator(),
+            child: CircularProgressIndicator(color: Theme.of(context).colorScheme.onPrimaryContainer,),
           ),
         )
       ],
