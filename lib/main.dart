@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:isalmi/l10n/app_localizations.dart';
+
 import 'package:isalmi/style/theme_data.dart';
 import 'package:isalmi/ui/chapter_details/chapter_details_screen.dart';
 import 'package:isalmi/ui/hadeth_details/hadeth_details_screen.dart';
 import 'package:isalmi/ui/home/home_screen.dart';
 import 'package:isalmi/ui/splash/splash_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +19,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      
+      // to do change the language
+      
+      locale: Locale('ar'),
+      
       debugShowCheckedModeBanner: false,
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,
