@@ -21,7 +21,7 @@ class DefaultScreen extends StatelessWidget {
         ),
       ),
       child: Scaffold(
-        appBar: AppBar(title: Text('Islami',)),
+        appBar: AppBar(title: Text(appTranslate(context).appTitle,)),
         body: body,
       ),
     );

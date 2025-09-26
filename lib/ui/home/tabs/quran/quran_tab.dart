@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:isalmi/style/theme_data.dart';
 import 'package:isalmi/ui/home/tabs/quran/quran_widget.dart';
 import 'package:isalmi/ui_utiles.dart';
 
@@ -58,7 +57,7 @@ class _QuranTabState extends State<QuranTab> {
               children: [
                 Expanded(
                   child: Text(
-                    'Sura Name',
+                    appTranslate(context).suraTitle,
                     style: Theme.of(context).textTheme.bodyMedium,
                     textAlign: TextAlign.center,
                   ),
@@ -73,7 +72,7 @@ class _QuranTabState extends State<QuranTab> {
                 // ),
                 Expanded(
                   child: Text(
-                      'Number Verses',
+                    appTranslate(context).numberVerses,
                     style: Theme.of(context).textTheme.bodyMedium,
                     textAlign: TextAlign.center,
                   ),

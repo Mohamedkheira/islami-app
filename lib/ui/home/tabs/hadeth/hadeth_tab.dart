@@ -6,7 +6,6 @@ import '../../../../ui_utiles.dart';
 import 'hadeth_widget.dart';
 
 class HadethTab extends StatefulWidget {
-
   const HadethTab({super.key});
 
   @override
@@ -48,7 +47,7 @@ class _HadethTabState extends State<HadethTab> {
             ),
           ),
           child: Text(
-            'AHadeth',
+            appTranslate(context).alaHadeth,
             style: Theme.of(context).textTheme.bodyMedium,
             textAlign: TextAlign.center,
           ),
