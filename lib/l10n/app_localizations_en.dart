@@ -31,4 +31,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get radioTab => 'Radio';
+
+  @override
+  String get settingsTab => 'Settings';
 }
