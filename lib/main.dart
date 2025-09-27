@@ -9,15 +9,24 @@ import 'package:isalmi/ui/hadeth_details/hadeth_details_screen.dart';
 import 'package:isalmi/ui/home/home_screen.dart';
 import 'package:isalmi/ui/splash/splash_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-
-void main() {
-  runApp(MultiProvider(
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // --> App to build becouse
+  var sharedPreferences = await SharedPreferences.getInstance();
+  runApp(
+    MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_)=> ThemeProvider(),),
-        ChangeNotifierProvider(create: (_)=> LocaleProvider(),),
+        ChangeNotifierProvider(
+          create: (_) => ThemeProvider(sharedPreferences),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => LocaleProvider(sharedPreferences),
+        ),
       ],
-      child: const MyApp()));
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
