@@ -4,6 +4,7 @@ import 'package:isalmi/ui/home/tabs/hadeth/hadeth_tab.dart';
 import 'package:isalmi/ui/home/tabs/quran/quran_tab.dart';
 import 'package:isalmi/ui/home/tabs/radio/radio_tab.dart';
 import 'package:isalmi/ui/home/tabs/sebha/sebha_tab.dart';
+import 'package:isalmi/ui/home/tabs/settings/settings_tab.dart';
 
 import '../../components/bottom_nav_item.dart';
 import '../../ui_utiles.dart';
@@ -23,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     HadethTab(),
     SebhaTab(),
     RadioTab(),
+    SettingsTab(),
   ];
   int selectIndex =0;
 
@@ -57,6 +59,11 @@ class _HomeScreenState extends State<HomeScreen> {
             iconPath: 'radio.png',
             title: appTranslate(context).radioTab,
             backgroundColor: Theme.of(context).colorScheme.primary
+          ),
+          BottomNavItem(
+              mainIcon: Icon(Icons.settings),
+              title: appTranslate(context).settingsTab,
+              backgroundColor: Theme.of(context).colorScheme.primary
           ),
         ],
       ),

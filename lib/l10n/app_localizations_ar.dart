@@ -31,4 +31,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get radioTab => 'راديو';
+
+  @override
+  String get settingsTab => 'الأعدادات';
 }

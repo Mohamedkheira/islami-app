@@ -24,12 +24,12 @@ class MyApp extends StatelessWidget {
       
       // to do change the language
       
-      locale: Locale('ar'),
+      locale: Locale('en'),
       
       debugShowCheckedModeBanner: false,
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       routes: {
         SplashScreen.routeName : (_) => SplashScreen(),
         HomeScreen.routeName : (_) => HomeScreen(),

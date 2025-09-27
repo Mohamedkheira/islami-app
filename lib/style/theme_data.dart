@@ -5,7 +5,7 @@ class MyThemeData {
   static final Color darkPrimary = Color(0XFF141A2E);
   static final Color darkSecondary = Color(0XFFFACC1D);
   static final Color whiteColor = Colors.white;
-  static bool isDark = true;
+  static bool isDark = false;
 
   static final ThemeData lightTheme = ThemeData(
     cardTheme: CardThemeData(
@@ -31,6 +31,9 @@ class MyThemeData {
     ),
     scaffoldBackgroundColor: Colors.transparent,
     appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(
+        color: Colors.black
+      ),
       color: Colors.transparent,
       centerTitle: true,
       titleTextStyle: TextStyle(
@@ -63,11 +66,20 @@ class MyThemeData {
         fontWeight: FontWeight.w700,
       ),
       bodyMedium: TextStyle(
+        color: Colors.black,
         fontFamily: 'Massiri',
         fontSize: 25,
         fontWeight: FontWeight.w600,
       ),
+
+      bodyLarge: TextStyle(
+        color: lightPrimary,
+        fontFamily: 'Massiri',
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
+      ),
       bodySmall: TextStyle(
+        color: Colors.black,
         fontFamily: 'Inter',
         fontSize: 20,
         fontWeight: FontWeight.w400,
@@ -152,6 +164,12 @@ class MyThemeData {
         color: Colors.white,
         fontFamily: 'Inter',
         fontSize: 25,
+        fontWeight: FontWeight.w400,
+      ),
+      bodyLarge: TextStyle(
+        color: darkSecondary,
+        fontFamily: 'Massiri',
+        fontSize: 20,
         fontWeight: FontWeight.w400,
       ),
     ),

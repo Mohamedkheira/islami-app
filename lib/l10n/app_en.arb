@@ -6,5 +6,6 @@
   "quranTab": "Quran",
   "hadethTab": "Hadeth",
   "sebhaTab": "Sebha",
-  "radioTab": "Radio"
+  "radioTab": "Radio",
+  "settingsTab": "Settings"
 }
