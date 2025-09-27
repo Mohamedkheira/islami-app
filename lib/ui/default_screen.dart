@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:isalmi/providers/theme_provider.dart';
 import 'package:isalmi/style/theme_data.dart';
+import 'package:provider/provider.dart';
 
 import '../ui_utiles.dart';
 
@@ -10,7 +12,8 @@ class DefaultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = MyThemeData.isDark;
+    ThemeProvider themeProvider = Provider.of<ThemeProvider>(context);
+    bool isDark = themeProvider.isDarkEnabled();
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(

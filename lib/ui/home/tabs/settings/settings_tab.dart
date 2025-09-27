@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:isalmi/providers/local_provider.dart';
+import 'package:isalmi/providers/theme_provider.dart';
+import 'package:isalmi/ui_utiles.dart';
+import 'package:provider/provider.dart';
 
 import 'button_sheet/language_button_sheet.dart';
 import 'button_sheet/theme_button_sheet.dart';
@@ -9,6 +13,8 @@ class SettingsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    LocaleProvider localeProvider = LocaleProvider.get(context);
+    ThemeProvider themeProvider = ThemeProvider.get(context);
     return Padding(
       padding: const EdgeInsetsDirectional.only(
         top: 80,
@@ -18,7 +24,7 @@ class SettingsTab extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Theme', style: Theme.of(context).textTheme.bodyMedium),
+          Text(appTranslate(context).theme, style: Theme.of(context).textTheme.bodyMedium),
 
           Divider(height: 10),
           SizedBox(height: 10),
@@ -36,12 +42,12 @@ class SettingsTab extends StatelessWidget {
                   color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
-              child: Text('Light', style: Theme.of(context).textTheme.bodyLarge),
+              child: Text(themeProvider.getLocaleChange(), style: Theme.of(context).textTheme.bodyLarge),
             ),
           ),
 
           SizedBox(height: 40),
-          Text('Language', style: Theme.of(context).textTheme.bodyMedium),
+          Text(appTranslate(context).language, style: Theme.of(context).textTheme.bodyMedium),
           Divider(height: 10),
           SizedBox(height: 10),
           InkWell(
@@ -59,7 +65,7 @@ class SettingsTab extends StatelessWidget {
                 ),
               ),
               child: Text(
-                'English',
+                localeProvider.getLocaleChange(),
                 style: Theme.of(context).textTheme.bodyLarge,
               ),
             ),

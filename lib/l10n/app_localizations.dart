@@ -151,6 +151,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Settings'**
   String get settingsTab;
+
+  /// No description provided for @arabicTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic'**
+  String get arabicTitle;
+
+  /// No description provided for @englishTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get englishTitle;
+
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language;
+
+  /// No description provided for @theme.
+  ///
+  /// In en, this message translates to:
+  /// **'Theme'**
+  String get theme;
+
+  /// No description provided for @light.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get light;
+
+  /// No description provided for @dark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get dark;
 }
 
 class _AppLocalizationsDelegate

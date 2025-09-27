@@ -43,6 +43,9 @@ class MyThemeData {
         fontWeight: FontWeight.w700,
       ),
     ),
+    bottomSheetTheme: BottomSheetThemeData(
+      backgroundColor: Colors.white,
+    ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: lightPrimary,
       selectedItemColor: Colors.black,
@@ -84,6 +87,13 @@ class MyThemeData {
         fontSize: 20,
         fontWeight: FontWeight.w400,
       ),
+
+      titleMedium: TextStyle(
+        color: Colors.black,
+        fontFamily: 'Massiri',
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
+      ),
     ),
 
   );
@@ -106,7 +116,9 @@ class MyThemeData {
       thickness: 3,
       space: 0
     ),
-
+    bottomSheetTheme: BottomSheetThemeData(
+      backgroundColor: darkPrimary,
+    ),
     colorScheme: ColorScheme.fromSeed(
       onPrimaryContainer: darkSecondary,
       seedColor: darkPrimary,
@@ -168,6 +180,12 @@ class MyThemeData {
       ),
       bodyLarge: TextStyle(
         color: darkSecondary,
+        fontFamily: 'Massiri',
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
+      ),
+      titleMedium: TextStyle(
+        color: Colors.white,
         fontFamily: 'Massiri',
         fontSize: 20,
         fontWeight: FontWeight.w400,

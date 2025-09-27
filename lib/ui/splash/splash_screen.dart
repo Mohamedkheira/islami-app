@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:isalmi/providers/theme_provider.dart';
 import 'package:isalmi/style/theme_data.dart';
 import 'package:isalmi/ui/home/home_screen.dart';
 import 'package:isalmi/ui_utiles.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatelessWidget {
   static const String routeName = 'Splash-Screen';
@@ -9,7 +11,8 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isDark = MyThemeData.isDark;
+    ThemeProvider themeProvider = Provider.of<ThemeProvider>(context);
+    bool isDark = themeProvider.isDarkEnabled();
     Future.delayed(Duration(seconds: 2),(){
       Navigator.pushReplacementNamed(context, HomeScreen.routeName);
     });

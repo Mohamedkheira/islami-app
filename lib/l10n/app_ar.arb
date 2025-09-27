@@ -7,5 +7,11 @@
   "hadethTab": "حديث",
   "sebhaTab": "التسبيح",
   "radioTab": "راديو",
-  "settingsTab": "الأعدادات"
+  "settingsTab": "الأعدادات",
+  "arabicTitle": "العربية",
+  "englishTitle": "الأنجليزية",
+  "language": "اللغة",
+  "theme": "المظهر",
+  "light": "نهاري",
+  "dark": "ليلي"
 }
