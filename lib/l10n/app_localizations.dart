@@ -187,6 +187,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Dark'**
   String get dark;
+
+  /// No description provided for @quranRadio.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran Kareem Radio'**
+  String get quranRadio;
 }
 
 class _AppLocalizationsDelegate

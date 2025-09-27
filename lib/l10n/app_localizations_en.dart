@@ -52,4 +52,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dark => 'Dark';
+
+  @override
+  String get quranRadio => 'Quran Kareem Radio';
 }

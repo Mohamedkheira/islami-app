@@ -16,8 +16,8 @@ class _HadethTabState extends State<HadethTab> {
   List<Hadeth> allHadeth =[];
   @override
   void initState() {
-    readHadethData();
     super.initState();
+    readHadethData();
   }
 
   @override
@@ -58,7 +58,7 @@ class _HadethTabState extends State<HadethTab> {
                 return HadethWidget(hadeth: allHadeth[index],);
               },
               separatorBuilder: (context, index) => Divider(),
-              itemCount: 50): Center(
+              itemCount: allHadeth.length): Center(
             child: CircularProgressIndicator(color: Theme.of(context).colorScheme.onPrimaryContainer,),
           ),
         )
@@ -70,10 +70,11 @@ class _HadethTabState extends State<HadethTab> {
 
 
 
-  void readHadethData() async{
+  void readHadethData() async {
    String fileContent = await rootBundle.loadString("assets/files/ahadeth.txt");
 
    List<String> separatedAlHadeth = fileContent.split('#');
+setState(() {
 
    for(var i =0; i<separatedAlHadeth.length;i++){
      String singleHadeth = separatedAlHadeth[i];
@@ -84,6 +85,7 @@ class _HadethTabState extends State<HadethTab> {
      Hadeth hadeth = Hadeth(title: title, content: content);
      allHadeth.add(hadeth);
    }
+});
   }
 
 }
