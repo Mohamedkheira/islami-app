@@ -22,22 +22,32 @@ class RadioTab extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         Expanded(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconButton(
-                onPressed: (){},
-                icon: Icon(Icons.skip_previous,size: 30,),
-              ),
-              IconButton(
-                onPressed: (){},
-                icon: Icon(Icons.play_arrow_rounded,size: 30),
-              ),
-              IconButton(
-                onPressed: (){},
-                icon: Icon(Icons.skip_next,size: 30),
-              ),
-            ],
+          child: Directionality(
+            textDirection: TextDirection.ltr,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Directionality(
+                  textDirection: TextDirection.ltr,
+                  child: IconButton(
+                    onPressed: (){},
+                    icon: Icon(Icons.skip_previous,size: 30,),
+                  ),
+                ),
+                IconButton(
+                  onPressed: (){},
+
+                  icon: Icon(Icons.play_arrow_rounded,size: 30),
+                ),
+                Directionality(
+                  textDirection: TextDirection.ltr,
+                  child: IconButton(
+                    onPressed: (){},
+                    icon: Icon(Icons.skip_next,size: 30),
+                  ),
+                ),
+              ],
+            ),
           ),
         )
       ],

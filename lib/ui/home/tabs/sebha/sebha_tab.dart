@@ -14,9 +14,9 @@ class _SebhaTabState extends State<SebhaTab> {
   double angel = 0;
 
   List<String> tasbeh = [
-    'Sobhan Allah',
-    'Alhamed llah',
-    'Allah Akber',
+    'سبحان الله',
+    'الحمد لله',
+    'الله أكبر',
   ];
   int index = 0 ;
 
